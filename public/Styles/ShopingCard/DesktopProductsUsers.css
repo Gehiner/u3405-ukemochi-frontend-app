@@ -1,0 +1,41 @@
+@media(min-width:950px) {
+    .main-section{
+        height: 300px;
+    }
+    .main-section__img a{
+        font-size: 6rem;
+    }
+    .menu-container{
+        display: none;
+    }
+    nav{
+        grid-template-columns: 1fr 3fr 1fr 0.5fr;
+    }
+    .logo{
+        grid-column: 1/2;
+    }
+    .nav-container{
+        width: 100%;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .nav-container a{
+        font-size: var(--title-2);
+        font-weight: 500;
+        color: var(--french-rose);
+    }
+    .Log-in{
+        width: 140px;
+        height: 40px;
+        display: inline-block;
+        background-color: var(--french-rose);
+        border-radius: 20px;
+        text-align: center;
+        font-size: var(--title-4);
+        font-weight: 500;
+        color: var(--white);
+        padding: 12px;
+        margin: 10px;
+    }
+}

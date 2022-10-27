@@ -1,0 +1,140 @@
+:root{
+    --french-rose: #f7477aff;
+    --red: #f80000ff;
+    --black: #000000ff;
+    --honey-yellow: #ffb20fff;
+    --fiery-rose: #fe546bff;
+    --white:#fff;
+    --title-1:3.6rem;
+    --title-2:2.4rem;
+    --title-3:2.2rem;
+    --title-4:1.6rem;
+    --title-5:1.4rem;
+    --title-6:1.2rem;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 62.5%;
+    min-height: 100%;
+}
+a{
+    text-decoration: none;
+}
+.header{
+    width: 100%;
+    height: 98px;
+    background-color: var(--fiery-rose);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 4px;
+}
+.header h1{
+    font-size: var(--title-2);
+    text-align: center;
+    color: var(--white);
+}
+.header-user{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.header-icon-menu{
+    width: 49px;
+    height: 49px;
+}
+.header-icon-user{
+    width: 49px;
+    height: 49px;
+} 
+.header-admin{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.header-admin span{
+    font-size: var(--title-3);
+    font-weight: 500;
+    color: var(--white);
+}
+main{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    position: relative;
+}
+.main-title{
+    text-align: center;
+    font-size: var(--title-1);
+    color: var(--french-rose);
+    margin: 8px;
+}
+
+.button{
+    width: 150px;
+    height: 40px;
+    background-color: var(--french-rose);
+    color: var(--white);
+    font-size: var(--title-3);
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 8px auto;
+}
+.button:active{
+    background-color: var(--honey-yellow);
+}
+.button:hover{
+    cursor: pointer;
+}
+.sidebar-Desktop{
+    display: none;
+}
+.sidebar{
+    width: 220px;
+    height: auto;
+    background-color: var(--french-rose);
+    display: none;
+    grid-auto-rows: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 2px solid var(--french-rose);
+}
+.sidebar-option{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+.sidebar-option span{
+    font-size: var(--title-4);
+}
+.sidebar-option img{
+    width: 30px;
+    height: 30px;
+}
+.active{
+    background-color: var(--white);
+    color: var(--french-rose);
+    font-weight: bold;
+}
+.disabled{
+    background-color: var(--french-rose);
+    color: var(--white);
+    border-bottom: 2px solid var(--white);
+}
+input, textarea,button{
+    border: none;
+    outline: none;
+    }

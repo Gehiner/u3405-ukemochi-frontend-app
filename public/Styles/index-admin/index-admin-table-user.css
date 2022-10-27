@@ -1,0 +1,18 @@
+.table{
+    width: 1100px;
+    grid-template-columns: repeat(6, 1fr);
+}
+.main-table__header-title-big{
+    grid-column: 4/6;
+}
+.main-table-container{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+@media(min-width:1320px){
+    .main-table-container{
+        display: grid;
+        justify-content: center;
+    }
+}
+

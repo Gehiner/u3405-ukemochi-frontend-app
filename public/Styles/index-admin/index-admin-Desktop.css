@@ -1,0 +1,111 @@
+@media(min-width:800px){
+    header{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    header h1{
+        width: 20%;
+        padding: 13px;
+        text-align: start;
+        padding-left: 12px;
+    }
+    .header-user{
+        width: 25%;
+    }
+    .header-icon-menu{
+        display: none;
+    }
+    .header-user{
+        justify-content: flex-end;
+        padding-right: 12px;
+    }
+    main{
+        min-height:93.4vh;
+        padding: 0px;
+    }
+    .main-container{
+        padding: 12px 0px 0px 225px;
+    }
+    .main-contend{
+    width: 100%;
+    height: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .main-input{
+    width: 300px;
+    height: auto;
+    display: grid;
+    grid-template-rows: 16px 24px;
+    border: 2px solid var(--french-rose);
+    margin: 8px auto;
+    padding: 4px;   
+}
+.main-input span{
+    font-size: var(--title-5);
+    font-weight: 300;
+}
+.main-input input{
+    width: 100%;
+    height: 100%;
+    font-size: var(--title-4);
+}
+textarea{
+    font-family: 'League Spartan', sans-serif;
+    font-size: var(--title-4);
+}
+.main-input--big{
+    grid-template-rows: 16px 60px;
+}
+    .main-contend{
+        width: 100%;
+        height: auto;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    input, textarea,button{
+        border: none;
+        outline: none;
+    }
+    .main-input{
+        width: 300px;
+        height: auto;
+        display: grid;
+        grid-template-rows: 16px 24px;
+        border: 2px solid var(--french-rose);
+        margin: 8px auto;
+        padding: 4px;   
+    }
+    .main-input span{
+        font-size: var(--title-5);
+        font-weight: 300;
+    }
+    .main-input input{
+        width: 100%;
+        height: 100%;
+        font-size: var(--title-4);
+    }
+    textarea{
+        font-family: 'League Spartan', sans-serif;
+        font-size: var(--title-4);
+    }
+    .main-input--big{
+        grid-template-rows: 16px 60px;
+    }
+    .sidebar-Desktop{
+        height: 100%;
+        width: 220px;
+        background-color: var(--french-rose);
+        display: grid;
+        grid-auto-rows: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-right: 2px solid var(--french-rose);
+    }
+}

@@ -1,0 +1,36 @@
+.main-contend{
+    width: 100%;
+    height: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+input, textarea,button{
+    border: none;
+    outline: none;
+}
+.main-input{
+    width: 300px;
+    height: auto;
+    display: grid;
+    grid-template-rows: 16px 24px;
+    border: 2px solid var(--french-rose);
+    margin: 8px auto;
+    padding: 4px;   
+}
+.main-input span{
+    font-size: var(--title-5);
+    font-weight: 300;
+}
+.main-input input{
+    width: 100%;
+    height: 100%;
+    font-size: var(--title-4);
+}
+textarea{
+    font-family: 'League Spartan', sans-serif;
+    font-size: var(--title-4);
+}
+.main-input--big{
+    grid-template-rows: 16px 60px;
+}
