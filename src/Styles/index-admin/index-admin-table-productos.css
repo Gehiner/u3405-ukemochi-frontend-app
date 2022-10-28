@@ -1,0 +1,18 @@
+.main-table-container{
+    width: 100%;
+    overflow-y: scroll;
+    scroll-behavior:  smooth;
+
+}
+.table{
+    width: 1600px;
+    grid-template-columns: repeat(11, 1fr);
+}
+.main-table__header{
+    grid-template-rows: 30px;
+}
+.main-table__header-title-big{
+    grid-column: 8/10;
+}
+
+

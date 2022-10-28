@@ -3,4 +3,3 @@ function menu(){
 }
 let menus=document.getElementById("opciones-menu");
 menus.style.display="none";
-

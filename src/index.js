@@ -1,15 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import Header from "./General/Header"
-import{BrowserRouters, Routes, Route} from "react-router-dom"
+import Header from './Componentes/Header/Header';
+import HeaderAdmin from './Componentes/Header/HeaderAdmin';
+import Productos from './Componentes/Tablas/Productos';
+import Usuarios from './Componentes/Tablas/Usuarios';
+import CrearUsuarios from './Componentes/Create/CrearUsuarios';
+import CrearProductos from './Componentes/Create/CrearProductos';
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header />
-    <App />
+    <HeaderAdmin/>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/productos' element={<Productos/>} exact>
+        </Route>
+
+        <Route path='/productos/create' element={<CrearProductos/>} exact>
+        </Route>
+
+        <Route path='/usuarios' element={<Usuarios/>} exact>
+        </Route>
+
+        <Route path='/usuarios/crear' element={<CrearUsuarios/>} exact>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
