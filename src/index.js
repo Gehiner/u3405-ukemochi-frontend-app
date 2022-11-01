@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; //este es un comentario de prueba
 import ReactDOM from 'react-dom/client';
 import Productos from './Componentes/Tablas/Productos';
 import Usuarios from './Componentes/Tablas/Usuarios';
