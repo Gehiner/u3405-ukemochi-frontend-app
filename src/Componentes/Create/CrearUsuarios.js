@@ -2,9 +2,13 @@ import "../../Styles/index-admin/index-admin.css"
 import "../../Styles/index-admin/index-admin-contend.css"
 import "../../Styles/index-admin/index-admin-Desktop.css"
 import "../../Styles/index-admin/index-admin-table-user.css"
-import "../../Styles/Products-Users/mainProductsUser.css"
+import "../../Styles/main.css"
+import { Link } from "react-router-dom"
+import HeaderAdmin from "../Header/HeaderAdmin"
 const CrearUsuarios=()=>{
     return(
+        <body>
+            <HeaderAdmin/>
             <main>
                 <section className="sidebar" id="opciones-menu">
                         <a className="sidebar-option disabled" href="index-admin.html">
@@ -29,22 +33,22 @@ const CrearUsuarios=()=>{
                         </a>
                 </section>
                 <section className="sidebar-Desktop">
-                    <a className="sidebar-option disabled" href="index-admin.html">
+                    <Link className="sidebar-option disabled" to="/productos/create">
                         <img src="https://i.ibb.co/ThSRhvf/carbon-add-filled-White.webp" alt="icono de añadir"/>
                         <span>Crear Productos</span>
-                    </a>
-                    <a className="sidebar-option disabled" href="admin-productos.html">
+                    </Link>
+                    <Link className="sidebar-option disabled" to="/productos">
                         <img src="https://i.ibb.co/vdkwrZT/mdi-candy-White.webp" alt="icono de dulces"/>
                         <span>Productos</span>
-                    </a>
-                    <a className="sidebar-option active" href="admin-crearUsuario.html">
+                    </Link>
+                    <Link className="sidebar-option active" to="/usuarios/crear">
                         <img src="https://i.ibb.co/G2r4QCQ/bxs-user-plus.webp" alt="icono de añadir usuario"/>
                         <span>Crear Usuario</span>
-                    </a>
-                    <a className="sidebar-option disabled" href="admin-users.html">
+                    </Link>
+                    <Link className="sidebar-option disabled" to="/usuarios">
                         <img src="https://i.ibb.co/7y7t2LX/bxs-user-circle-White.webp" alt="icono de usuario"/>
                         <span>Usuarios</span>
-                    </a>
+                    </Link>
                     <a className="sidebar-option disabled" href="">
                         <img src="https://i.ibb.co/K0VRBHk/bxs-log-out-circle-White.webp" alt="Icono de cerrar Sesi&oacute;n"/>
                         <span>Cerrar Sesi&oacute;n</span>
@@ -81,6 +85,7 @@ const CrearUsuarios=()=>{
                     </form>
                 </section>
             </main>
+        </body>    
     )
 }
 

@@ -15,7 +15,6 @@
 *{
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
 }
 html{
     font-family: 'League Spartan', sans-serif;
@@ -23,7 +22,19 @@ html{
     position: relative;
     min-height: 100%;
 }
-
+header{
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+}
+nav{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 ul{
     list-style: none;
 }
@@ -78,7 +89,6 @@ a:hover{
 .menu-container__options{
     width: 280px;
     height: 140px;
-    display: none;
     background-color: var(--fiery-rose);
     border-radius: 5px;
     position: absolute;
@@ -101,6 +111,9 @@ a:hover{
 .Log-in{
     display: none;
 }
+.main{
+    margin: 30px 0px;
+}
 main{
     width: 100%;
     height: auto;
@@ -121,7 +134,7 @@ main h1{
     height: inherit;
     display: grid;
     place-content: center;
-    background-image: url(IMG/corazones.webp);
+    background-image: url(https://i.ibb.co/pv93zKm/corazones.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -161,19 +174,19 @@ main h1{
     margin: 16px 0px;
 }
 .product-card-galletas{
-    background-image: url(IMG/galletas.webp);
+    background-image: url(https://i.ibb.co/cgrv3VM/galletas.webp);
 }
 .product-card-chocolate{
-    background-image: url(IMG/chocolatinas.webp);
+    background-image: url(https://i.ibb.co/zGZGNSS/chocolatinas.webp);
 }
 .product-card-confeti{
-    background-image: url(IMG/candys.webp);
+    background-image: url(https://i.ibb.co/VL7K0jD/candys.webp);
 }
 .product-card-fitness{
-    background-image: url(IMG/fitnness.webp);
+    background-image: url(https://i.ibb.co/QJYftXh/fitnness.webp);
 }
 .product-card-picante{
-    background-image: url(IMG/picantes.webp);
+    background-image: url(https://i.ibb.co/KL3GnQ4/picantes.webp);
 }
 .product-card__background{
     place-content: center;
@@ -221,3 +234,47 @@ input, textarea,button{
     border: none;
     outline: none;
     }
+
+.cardShopping-container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 3fr 1fr;
+    grid-auto-rows: auto;
+    margin-top: 30px;
+}
+    main .main-input-big{
+        width: 500px;
+    }
+    main .card-products-container{
+        width: 300px;
+        height: auto;
+        border: 1px solid var(--french-rose);
+        padding: 4px;
+        border-radius: 20px;
+    }
+    main .card-products-title{
+        font-size: var(--title-3);
+        font-weight: 700;
+        text-align: center;
+        color: var(--french-rose);
+    }
+    main .card-products-items{
+        width: 280px;
+        display: grid;
+        align-items: center;
+        font-size: var(--title-4);
+        grid-template-columns: 2fr 1fr;
+        margin: 8px auto;
+        border: 2px dotted var(--black);
+        padding: 4px 12px;
+        border-radius: 20px;
+    }
+    main .card-products-items span{
+        text-align: right;
+    }
+    main .card-products-items span b{
+        color: var(--french-rose);
+    }
+    
