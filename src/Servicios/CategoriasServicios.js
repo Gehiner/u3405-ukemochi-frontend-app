@@ -15,10 +15,12 @@ const categorias=[
     }
 ];
 
-const categoriasServicios={};
+const CategoriasServicios={};
 
-categoriasServicios.ListarCategorias=() =>{
-    return categorias;
+CategoriasServicios.listarCategorias = () => {
+    return new Promise((resolve, reject) => {
+    resolve(categorias)
+    })
 }
 
-export default categoriasServicios;
+export default CategoriasServicios;
