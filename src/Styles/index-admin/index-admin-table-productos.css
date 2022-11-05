@@ -12,7 +12,21 @@
     grid-template-rows: 30px;
 }
 .main-table__header-title-big{
-    grid-column: 8/10;
+    grid-column: 7/9;
+}
+.main-table__opciones{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.main-table__opciones .opciones-container{
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.opciones-container img{
+    width: 36px;
 }
 
 

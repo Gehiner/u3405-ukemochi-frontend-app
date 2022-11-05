@@ -6,6 +6,7 @@ import CrearUsuarios from './Componentes/Create/CrearUsuarios';
 import CrearProductos from './Componentes/Create/CrearProductos';
 import Carrito from './Componentes/Usuarios/Carrito';
 import CardProductos from './Componentes/Usuarios/CardProductos';
+import EditarProductos from './Componentes/Tablas/EditarProductos';
 import ContendHome from './Componentes/Usuarios/ContendHome';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -28,6 +29,12 @@ root.render(
         <Route 
           path='/productos/create' 
           element={<CrearProductos/>} 
+          exact>
+        </Route>
+
+        <Route 
+          path='/productos/edit' 
+          element={<EditarProductos/>} 
           exact>
         </Route>
 

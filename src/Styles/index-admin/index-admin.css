@@ -109,7 +109,40 @@ main{
     color: var(--white);
     border-bottom: 2px solid var(--white);
 }
-input, textarea,button{
+.input-checkbox-container{
+    width: 300px;
+    height: 40px;
+    padding: 4px;
+    margin: 8px auto;
+    position: relative;
+}
+.input-checkbox{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    font-size: var(--title-3);
+    position: absolute;
+    left: -8px;
+}
+.input-checkbox input{
+    width: 40px;
+    height: 22px;
+    padding: 0 12px;
+}
+input, textarea,button,select{
     border: none;
     outline: none;
+}
+select{
+    background-color: white;
+}
+.button-delete{
+    background-color: var(--red);
+    height: 50px;
+}
+.button-save{
+    background-color: rgb(62, 154, 219);
+    height: 50px;
 }

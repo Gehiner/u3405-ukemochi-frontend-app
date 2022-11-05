@@ -55,7 +55,7 @@ const CrearUsuarios=()=>{
                     </a>
                 </section>
                 <section className="main-container">
-                    <h2 className="main-title">Crear Productos</h2>
+                    <h2 className="main-title">Crear Usuarios</h2>
                     <form action="" className="main-contend">
                         <label for="names" className="main-input">
                             <span>Nombres</span>
@@ -64,6 +64,10 @@ const CrearUsuarios=()=>{
                         <label for="apellidos" className="main-input">
                             <span>Apellidos</span>
                             <input type="text" required id="apellidos" name="apellidos"/>
+                        </label>
+                        <label for="cedula" className="main-input">
+                            <span>C&eacute;dula</span>
+                            <input type="number" required id="cedula" name="cedula"/>
                         </label>
                         <label for="nickName" className="main-input">
                             <span>Nick Name</span>
