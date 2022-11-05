@@ -1,24 +1,12 @@
-const categorias=[
-    {
-        "id":1,
-        "nombre":"Paleta Dracula",
-        "tipo":"Helado",
-        "cantidad":20,
-        "marca":"Cremhelado"
-    },
-    {
-        "id":2,
-        "nombre":"Paleta Dracula",
-        "tipo":"Helado",
-        "cantidad":20,
-        "marca":"Cremhelado"
-    }
-];
+import axios from "axios";
+const CategoriasServicios={};
 
-const categoriasServicios={};
-
-categoriasServicios.ListarCategorias=() =>{
-    return categorias;
+CategoriasServicios.listarCategorias = () => {
+    return axios.get("https://express-nodejs-ejs-youtube.herokuapp.com/productos");
 }
 
-export default categoriasServicios;
+CategoriasServicios.buscarcategorias=() =>{
+    return axios.get()
+}
+
+export default CategoriasServicios;

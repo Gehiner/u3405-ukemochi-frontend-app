@@ -38,6 +38,7 @@
 }
 .table{
     display:grid;
+    align-items: center;
 }
 .main-table__header-title{
     font-size: var(--title-4);
@@ -61,10 +62,9 @@
 }
 .main-table__contend-info{
     padding: 8px;
-    border-bottom: 1px solid var(--french-rose);
 }
-.main-table__contend:hover{
-    background-color: var(--honey-yellow);
+.main-table__contend{
+    border-bottom: 1px solid var(--french-rose);
 }
 
 

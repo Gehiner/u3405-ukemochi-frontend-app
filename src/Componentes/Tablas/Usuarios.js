@@ -72,6 +72,9 @@ const Usuarios=()=>{
                                 Nickname
                             </div>
                             <div className="main-table__header-title">
+                                C&eacute;dula
+                            </div>
+                            <div className="main-table__header-title">
                                 Correo
                             </div>
                             <div className="main-table__header-title main-table__header-title-2">
@@ -90,6 +93,9 @@ const Usuarios=()=>{
                             </div>
                             <div className="main-table__contend-info">
                                 Arias
+                            </div>
+                            <div className="main-table__contend-info">
+                                18191649161
                             </div>
                             <div className="main-table__contend-info">
                                 jhso@jssno
