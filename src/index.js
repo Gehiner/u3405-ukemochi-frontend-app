@@ -4,10 +4,10 @@ import Productos from './Componentes/Tablas/Productos';
 import Usuarios from './Componentes/Tablas/Usuarios';
 import CrearUsuarios from './Componentes/Create/CrearUsuarios';
 import CrearProductos from './Componentes/Create/CrearProductos';
-import Carrito from './Componentes/Usuarios/Carrito';
-import CardProductos from './Componentes/Usuarios/CardProductos';
+import Carrito from './Componentes/Carrito/Carrito';
+import CardProductos from './Componentes/Carrito/CardProductos';
 import EditarProductos from './Componentes/Tablas/EditarProductos';
-import ContendHome from './Componentes/Usuarios/ContendHome';
+import ContendHome from './Componentes/Carrito/ContendHome';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
