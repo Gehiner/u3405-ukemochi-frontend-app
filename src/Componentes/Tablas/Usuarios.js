@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom"
 import HeaderAdmin from "../Header/HeaderAdmin"
+import Estados from "../../Enums/Estados"
 const Usuarios=()=>{
     const [ estado, setEstado ] = useState(Estados.CARGANDO);
     const [ listaUsuarios, setListaUsuarios ] = useState([]);
@@ -93,7 +94,7 @@ const Usuarios=()=>{
                                 Direcci&oacute;n
                             </div>
                             <div className="main-table__header-title">
-                                T&eacute;lefono
+                                Tel&eacute;fono
                             </div>
                             <div className="main-table__header-title">
                                 Opciones

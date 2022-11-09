@@ -70,14 +70,6 @@ const Productos=()=>{
                         <img src="https://i.ibb.co/H7Xx335/mdi-candy.webp" alt="icono de dulces"/>
                         <span>Productos</span>
                     </Link>
-                    <Link className="sidebar-option disabled"  to="/usuarios/crear">
-                        <img src="https://i.ibb.co/QFQVYrt/bxs-user-plus-White.webp" alt="icono de añadir usuario"/>
-                        <span>Crear Usuario</span>
-                    </Link>
-                    <Link className="sidebar-option disabled" to="/usuarios">
-                        <img src="https://i.ibb.co/7y7t2LX/bxs-user-circle-White.webp" alt="Icono de Usuario"/>
-                        <span>Usuarios</span>
-                    </Link>
                     <a className="sidebar-option disabled" href="">
                         <img src="https://i.ibb.co/K0VRBHk/bxs_log-out-circle-White.webp" alt=""/>
                         <span>Cerrar Sesi&oacute;n</span>

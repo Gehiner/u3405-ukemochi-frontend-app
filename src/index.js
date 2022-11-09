@@ -49,6 +49,12 @@ root.render(
           element={<CrearUsuarios/>} 
           exact>
         </Route>
+        
+        <Route 
+          path='/usuarios/edit' 
+          element={<EditarUsuarios/>} 
+          exact>
+        </Route>
 
         <Route 
           path='/candys' 
