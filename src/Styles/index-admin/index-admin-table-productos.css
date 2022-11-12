@@ -6,7 +6,7 @@
 }
 .table{
     width: 1600px;
-    grid-template-columns: repeat(11, 1fr);
+    grid-template-columns: repeat(11, 220px);
 }
 .main-table__header{
     grid-template-rows: 30px;
