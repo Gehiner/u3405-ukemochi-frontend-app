@@ -33,7 +33,7 @@ root.render(
         </Route>
 
         <Route 
-          path='/productos/edit' 
+          path='/productos/edit/:id' 
           element={<EditarProductos/>} 
           exact>
         </Route>

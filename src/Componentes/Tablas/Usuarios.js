@@ -27,7 +27,7 @@ const Usuarios=()=>{
                         <img src="https://i.ibb.co/gtHtNRb/bxs-user-circle.webp" alt=""/>
                         <span>Usuarios</span>
                     </a>
-                    <a className="sidebar-option disabled" href="">
+                    <a className="sidebar-option disabled" href="/">
                         <img src="https://i.ibb.co/K0VRBHk/bxs_log-out-circle-White.webp" alt=""/>
                         <span>Cerrar Sesi&oacute;n</span>
                     </a>
@@ -49,7 +49,7 @@ const Usuarios=()=>{
                         <img src="https://i.ibb.co/gtHtNRb/bxs-user-circle.webp" alt=""/>
                         <span>Usuarios</span>
                     </Link>
-                    <a className="sidebar-option disabled" href="">
+                    <a className="sidebar-option disabled" href="/">
                         <img src="https://i.ibb.co/K0VRBHk/bxs_log-out-circle-White.webp" alt=""/>
                         <span>Cerrar Sesi&oacute;n</span>
                     </a>
