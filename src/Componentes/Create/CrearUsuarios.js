@@ -27,7 +27,7 @@ const CrearUsuarios=()=>{
                             <img src="https://i.ibb.co/7y7t2LX/bxs-user-circle-White.webp" alt="Icono de Usuario"/>
                             <span>Usuarios</span>
                         </a>
-                        <a className="sidebar-option disabled" href="">
+                        <a className="sidebar-option disabled" href="/">
                             <img src="https://i.ibb.co/K0VRBHk/bxs-log-out-circle-White.webp" alt="Icono de cerrar Sesi&oacute;n"/>
                             <span>Cerrar Sesi&oacute;n</span>
                         </a>
@@ -49,7 +49,7 @@ const CrearUsuarios=()=>{
                         <img src="https://i.ibb.co/7y7t2LX/bxs-user-circle-White.webp" alt="icono de usuario"/>
                         <span>Usuarios</span>
                     </Link>
-                    <a className="sidebar-option disabled" href="">
+                    <a className="sidebar-option disabled" href="/">
                         <img src="https://i.ibb.co/K0VRBHk/bxs-log-out-circle-White.webp" alt="Icono de cerrar Sesi&oacute;n"/>
                         <span>Cerrar Sesi&oacute;n</span>
                     </a>
