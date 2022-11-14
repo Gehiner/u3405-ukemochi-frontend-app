@@ -2,11 +2,9 @@ import axios from "axios";
 const CategoriasServicios={};
 
 CategoriasServicios.listarCategorias = () => {
-    return axios.get("https://express-nodejs-ejs-youtube.herokuapp.com/productos");
+    return axios.get("http://localhost:3000/productcategory");
 }
 
-CategoriasServicios.buscarcategorias=() =>{
-    return axios.get()
-}
+
 
 export default CategoriasServicios;

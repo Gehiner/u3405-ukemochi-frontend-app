@@ -13,6 +13,8 @@ const Productos=()=>{
     const [estado, setEstado] = useState(Estados.CARGANDO);
     const [listaProductos, setListaProductos] = useState([]);
     const [busqueda, setBusqueda]=useState("");
+    const [idBorrar, setIdBorrar]=useState("");
+
 
     const cargarDatos = async () => {
         try {
@@ -41,10 +43,10 @@ const Productos=()=>{
     }, [])
 
     const buscarProducto=async(event)=>{
+        console.log(event);
         event.preventDefault();
         try {
             const respuesta = await ProductosServicios.buscarproducts(busqueda);
-            console.log(respuesta);
             if (respuesta.data.length > 0) {
                 setListaProductos(respuesta.data);
                 setEstado(Estados.OK)
@@ -56,6 +58,16 @@ const Productos=()=>{
             console.log(error);
         }
     }
+    const borrarProducto = async (id) => {
+        try {
+            setIdBorrar(id);
+            await ProductosServicios.borrarProducto(idBorrar);
+            cargarDatos();
+        } catch (error) {
+            
+        }
+    }
+
     return(
         <div>
             <HeaderAdmin/>
@@ -182,7 +194,7 @@ const Productos=()=>{
                                                 <a href={"/productos/edit/" + producto._id} >
                                                     <img src="https://cdn-icons-png.flaticon.com/512/3838/3838756.png" alt="Icono editar"/>
                                                 </a>
-                                                <a href="">
+                                                <a onClick={()=>borrarProducto(producto._id)}>
                                                     <img src="https://cdn-icons-png.flaticon.com/512/6932/6932392.png" alt="Icono borrar"/>
                                                 </a>
                                             </div>

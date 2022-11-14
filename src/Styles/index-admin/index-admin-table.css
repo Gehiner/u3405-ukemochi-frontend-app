@@ -62,6 +62,7 @@
 }
 .main-table__contend-info{
     padding: 8px;
+    overflow: hidden;
 }
 .main-table__contend{
     border-bottom: 1px solid var(--french-rose);
