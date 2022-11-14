@@ -146,3 +146,6 @@ select{
     background-color: rgb(62, 154, 219);
     height: 50px;
 }
+button{
+    background-color: #fff;
+}

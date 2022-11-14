@@ -5,7 +5,8 @@ import "../../Styles/index-admin/index-admin-table-productos.css"
 import "../../Styles/Products-Users/mainProductsUser.css"
 import { Link } from "react-router-dom"
 import HeaderAdmin from "../Header/HeaderAdmin"
-import { useState } from "react"
+import CategoriasServicios from "../../Servicios/CategoriasServicios"
+import { useEffect, useState } from "react"
 import ProductosServicios from "../../Servicios/ProductosServicios"
 import { useNavigate } from "react-router-dom"
 import { useParams } from "react-router-dom"
@@ -21,10 +22,24 @@ const CrearProductos=()=>{
     const[descripcion, setDescripcion]=useState('');
     const[keywords, setKeywords]=useState('');
     const[url, setUrl]=useState('');
+    const[codigo, setCodigo]=useState("");
+    const [listaCategorias, setListaCategorias]=useState([]);
+
+    const cargarCategorias = async () => {
+        try {
+            const respuesta = await CategoriasServicios.listarCategorias();
+            setListaCategorias(respuesta.data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     const cambiarNombre=(event)=>{
     setNombre(event.target.value);
     }
+    const cambiarCodigo=(event)=>{
+        setCodigo(event.target.value);
+        }
 
     const cambiarMarca=(event)=>{
         setMarca(event.target.value);
@@ -68,6 +83,7 @@ const CrearProductos=()=>{
         event.preventDefault();
         try {
             const producto={
+                codigo:codigo,
                 nombre:nombre,
                 tipo:categoria,
                 cantidad:parseInt(cantidad),
@@ -81,10 +97,22 @@ const CrearProductos=()=>{
             const respuesta=await ProductosServicios.guardarproducts(producto);
             console.log(respuesta);
             console.log(producto)
+            setKeywords("");
+            setNombre("");
+            setCantidad(0);
+            setCategoria("");
+            setMarca("");
+            setDescripcion("");
+            setPrecio(0);
+            setUrl("");
+            setDisponibilidad(false);
+            setCodigo("");
         } catch (error) {
             console.log(error);
         }
     }
+
+    useEffect(()=>{cargarCategorias()},[]);
     return(
         <body>
             <HeaderAdmin/>
@@ -139,13 +167,21 @@ const CrearProductos=()=>{
                         <label for="categoria" className="main-input">
                             <span>Categor&iacute;a</span>
                             <select type="text" required id="categoria" name="categoria" onChange={cambiarCategoria} value={categoria}>
-                                <option value="Galletas">Galletas</option>
-                                <option value="Galletas">Chocolatinas</option>
+                                <option defaultValue=""></option>
+                                {
+                                    listaCategorias.map((categoria)=>(
+                                        <option key={categoria.category} value={categoria.category}> {categoria.category}</option>
+                                    ))
+                                }
                             </select>
                         </label>
-                        <label for="name" className="main-input">
+                        <label for="codigo" className="main-input">
                             <span>Nombre</span>
-                            <input type="text" required id="name" name="name" onChange={cambiarNombre} value={nombre}/>
+                            <input type="text" required id="codigo" name="codigo" onChange={cambiarNombre} value={nombre}/>
+                        </label>
+                        <label for="codigo" className="main-input">
+                            <span>Codigo</span>
+                            <input type="text" required id="codigo" name="codigo" onChange={cambiarCodigo} value={codigo}/>
                         </label>
                         <label for="cantidad" className="main-input">
                             <span>Cantidad</span>

@@ -5,8 +5,9 @@
 
 }
 .table{
-    width: 1600px;
+    width: 2420px;
     grid-template-columns: repeat(11, 220px);
+    grid-auto-rows: auto;
 }
 .main-table__header{
     grid-template-rows: 30px;
