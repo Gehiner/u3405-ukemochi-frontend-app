@@ -103,6 +103,7 @@ const Productos=()=>{
                         <img src="https://i.ibb.co/H7Xx335/mdi-candy.webp" alt="icono de dulces"/>
                         <span>Productos</span>
                     </Link>
+
                     <Link className="sidebar-option disabled"  to="/usuarios/crear">
                         <img src="https://i.ibb.co/QFQVYrt/bxs-user-plus-White.webp" alt="icono de añadir usuario"/>
                         <span>Crear Usuario</span>
