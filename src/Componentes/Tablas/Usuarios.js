@@ -13,26 +13,25 @@ const Usuarios=()=>{
     const [ estado, setEstado ] = useState(Estados.CARGANDO);
     const [ listaUsuarios, setListaUsuarios ] = useState([]);
     const [ busqueda, setBusqueda ]=useState("");
-
-    const buscarUsuarios=
+    
+    const cargarDatos = async () => {
+        try {
+            const respuesta = await UsuariosServicios.listarUsuarios();
+            if (respuesta.data.length > 0) {
+                setEstado(Estados.OK);
+                setListaUsuarios(respuesta.data);
+                console.log(respuesta.data)
+            }
+            else {
+                setEstado(Estados.VACIO);
+            }
+        } catch (error) {
+            setEstado(Estados.ERROR);
+            console.log(error);
+        }
+    }
 
     useEffect(() => {
-        const cargarDatos = async () => {
-            try {
-                const respuesta = await UsuariosServicios.listarUsuarios();
-                if (respuesta.data.lenght > 0 ) {
-                    setListaUsuarios(respuesta);
-                    setEstado(Estados.OK);
-                    console.log(listaUsuarios);
-                }
-                else {
-                    setEstado(Estados.VACIO);
-                }
-            } catch (error) {
-                setEstado(Estados.ERROR);
-                console.log(error);
-            }
-        }
         cargarDatos();
     }, [])
     return(
@@ -54,6 +53,14 @@ const Usuarios=()=>{
                     </a>
                 </section>
                 <section className="sidebar-Desktop">
+                    <Link className="sidebar-option disabled" to="/productos/create">
+                        <img src="https://i.ibb.co/ThSRhvf/carbon-add-filled-White.webp" alt="icono de añadir"/>
+                        <span>Crear Productos</span>
+                    </Link>
+                    <Link className="sidebar-option disabled" to="/productos">
+                        <img src="https://i.ibb.co/vdkwrZT/mdi-candy-White.webp" alt="icono de dulces"/>
+                        <span>Productos</span>
+                    </Link>
                     <Link className="sidebar-option disabled" to="/usuarios/crear">
                         <img src="https://i.ibb.co/QFQVYrt/bxs-user-plus-White.webp" alt="icono de añadir usuario"/>
                         <span>Crear Usuario</span>
@@ -96,17 +103,10 @@ const Usuarios=()=>{
                             <div className="main-table__header-title">
                                 Tel&eacute;fono
                             </div>
-                            <div className="main-table__header-title">
-                                Opciones
-                            </div>
                         </div>
                         {
                                 estado === Estados.ERROR ? (
                                     <div>Ocurrió un error...</div>
-                                ) 
-                                :
-                                estado === Estados.CARGANDO ? (
-                                    <div>CARGANDO</div>
                                 ) 
                                 :
                                 estado === Estados.VACIO ? (
@@ -114,7 +114,7 @@ const Usuarios=()=>{
                                 )
                                 :                    
                                 listaUsuarios.map((usuario)=>(
-                                    <a className="main-table__contend table" href="" key={categoria.id}>
+                                    <a className="main-table__contend  table-user" href="" key={usuario._id}>
                                         <div className="main-table__contend-info">
                                             {usuario.nombre}
                                         </div>
@@ -122,60 +122,23 @@ const Usuarios=()=>{
                                             {usuario.apellido}
                                         </div>
                                         <div className="main-table__contend-info">
-                                            dadad
+                                            {usuario.nickname}
                                         </div>
                                         <div className="main-table__contend-info">
-                                            adad
+                                            {usuario.cedula}
                                         </div>
                                         <div className="main-table__contend-info">
-                                            5000
+                                            {usuario.email}
+                                        </div>
+                                        <div className="main-table__contend-info main-table__header-title-2">
+                                            {usuario.direccion}
                                         </div>
                                         <div className="main-table__contend-info">
-                                            25
-                                        </div>
-                                        <div className="main-table__contend-info main-table__header-title-big">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quasi corporis esse quia culpa tempore necessitatibus voluptate quidem cupiditate ipsum maxime 
-                                        </div>
-                                        <div className="main-table__contend-info">
-                                            Crocante
-                                        </div>
-                                        <div className="main-table__contend-info">
-                                            wwww.png.com
+                                            {usuario.telefono}
                                         </div>
                                     </a>
                             ))                
                         }
-                                    <div className="main-table__contend table-user" href="">
-                                        <div className="main-table__contend-info">
-                                            Juan Camilo
-                                        </div>
-                                        <div className="main-table__contend-info">
-                                            Arias Arias
-                                        </div>
-                                        <div className="main-table__contend-info">
-                                            Arias
-                                        </div>
-                                        <div className="main-table__contend-info">
-                                            18191649161
-                                        </div>
-                                        <div className="main-table__contend-info">
-                                            jhso@jssno
-                                        </div>
-                                        <div className="main-table__contend-info main-table__header-title-2">
-                                            Calle 78 #78-d Bucaramanga
-                                        </div>
-                                        <div className="main-table__contend-info">
-                                            123456789
-                                        </div>
-                                            <div className="opciones-container">
-                                                <a href="/productos/edit">
-                                                    <img src="https://cdn-icons-png.flaticon.com/512/3838/3838756.png" alt="Icono editar"/>
-                                                </a>
-                                                <a href="">
-                                                    <img src="https://cdn-icons-png.flaticon.com/512/6932/6932392.png" alt="Icono borrar"/>
-                                                </a>
-                                            </div>
-                                        </div>
                     </div>
                 </section>
             </main>

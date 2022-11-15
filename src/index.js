@@ -9,6 +9,7 @@ import CardProductos from './Componentes/Carrito/CardProductos';
 import EditarProductos from './Componentes/Tablas/EditarProductos';
 import ContendHome from './Componentes/Carrito/ContendHome';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
+import EditarUsuarios from './Componentes/Tablas/EditarUsuarios';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

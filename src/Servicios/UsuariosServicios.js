@@ -2,27 +2,27 @@ import axios from "axios";
 const UsuariosServicios={};
 
 UsuariosServicios.listarUsuarios = () => {
-    return axios.get("http://localhost:3000/api/usuarios");
+    return axios.get("https://express-nodejs-ejs-youtube.herokuapp.com/users");
 }
 
 UsuariosServicios.buscarusuarios=(criterio) =>{
-    return axios.get("http://localhost:3000/api/usuarios?q="+criterio);
+    return axios.get("https://express-nodejs-ejs-youtube.herokuapp.com/users?q="+criterio);
 }
 
 UsuariosServicios.buscarusuario = (id) => {
-    return axios.get("http://localhost:3000/api/usuarios/"+id);
+    return axios.get("https://express-nodejs-ejs-youtube.herokuapp.com/users"+id);
 }
 
 UsuariosServicios.guardarUsuario = (usuario) => {
-    return axios.post("http://localhost:3000/api/usuarios", usuario);
+    return axios.post("https://express-nodejs-ejs-youtube.herokuapp.com/users", usuario);
 }
 
 UsuariosServicios.modificarUsuario = (id, Usuario) => {
-    return axios.put("http://localhost:3000/api/Usuarios/"+id, Usuario);
+    return axios.put("https://express-nodejs-ejs-youtube.herokuapp.com/users"+id, Usuario);
 }
 
 UsuariosServicios.borrarUsuario = (id) => {
-    return axios.delete("http://localhost:3000/api/Usuarios/"+id);
+    return axios.delete("https://express-nodejs-ejs-youtube.herokuapp.com/users/"+id);
 }
 
 

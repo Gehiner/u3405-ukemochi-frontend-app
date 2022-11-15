@@ -58,10 +58,10 @@
     color:var(--black);
 }
 .main-table__header-title{
-    padding: 8px;
+    padding: 8px ;
 }
 .main-table__contend-info{
-    padding: 8px;
+    padding: 8px ;
     overflow: hidden;
 }
 .main-table__contend{
