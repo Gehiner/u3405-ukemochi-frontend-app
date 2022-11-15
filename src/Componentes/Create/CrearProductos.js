@@ -11,11 +11,12 @@ import ProductosServicios from "../../Servicios/ProductosServicios"
 import { useNavigate } from "react-router-dom"
 import { useParams } from "react-router-dom"
 
+
 const CrearProductos=()=>{
     const navigateTo = useNavigate();
     const[nombre, setNombre]=useState('');
     const[marca, setMarca]=useState('');
-    const[categoria ,setCategoria]=useState('Chocolatinas');
+    const[categoria ,setCategoria]=useState('');
     const[disponibilidad, setDisponibilidad]=useState(false);
     const[precio, setPrecio]=useState(0);
     const[cantidad, setCantidad]=useState(0);

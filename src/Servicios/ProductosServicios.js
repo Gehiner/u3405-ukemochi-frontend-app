@@ -3,26 +3,26 @@ import axios from "axios";
 const ProductosServicios={};
 
 ProductosServicios.listarProductos=()=>{
-    return axios.get("http://localhost:3000/products");
+    return axios.get("https://express-nodejs-ejs-youtube.herokuapp.com/products");
 }
 ProductosServicios.buscarproducts = (busqueda) => {
-    return axios.get("http://localhost:3000/products?q="+busqueda);
+    return axios.get("https://express-nodejs-ejs-youtube.herokuapp.com/products?q="+busqueda);
 }
 
 ProductosServicios.cargarProducto = (id) => {
-    return axios.get("http://localhost:3000/products/"+id);
+    return axios.get("https://express-nodejs-ejs-youtube.herokuapp.com/products/"+id);
 }
 
 ProductosServicios.modificarProducto = (id, body) => {
-    return axios.put("http://localhost:3000/products/"+id, body);
+    return axios.put("https://express-nodejs-ejs-youtube.herokuapp.com/products/"+id, body);
 }
 
 ProductosServicios.guardarproducts = (producto) => {
-    return axios.post("http://localhost:3000/products/create", producto);
+    return axios.post("https://express-nodejs-ejs-youtube.herokuapp.com/products/", producto);
 }
 
 ProductosServicios.borrarProducto = (id) => {
-    return axios.delete("http://localhost:3000/products/"+id);
+    return axios.delete("https://express-nodejs-ejs-youtube.herokuapp.com/products/"+id);
 }
 
 export default ProductosServicios;
